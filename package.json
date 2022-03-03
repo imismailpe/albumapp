@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "heroku-postbuild": "npm run next build && npm run next start"
+    "heroku-postbuild": "npm run next build && npm run start"
   },
   "dependencies": {
     "next": "12.1.0",
