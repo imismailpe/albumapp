@@ -1,7 +1,35 @@
-.photoGrid{
-    display: grid;
-    justify-content: space-evenly;
+.photoContainer{
+    display: flex;
+    justify-content: center;
     align-items: flex-start;
-    grid-template-columns: repeat(auto-fit, 300px);
+}
+.photoGrid{
+    position: absolute;
+    bottom: 5px;
+    height: 110px;
+    width: 95%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 4px;
+    overflow-x: auto;
+    border: 1px solid rgb(173, 162, 162);
+}
+.photoGrid img{
+    cursor: pointer;
+}
+.currentPhoto{
+    border: 1px solid rgb(212, 210, 210);
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    position: relative;
+}
+.currentPhoto img{
+    width: 600px;
+    height: 600px;
 }
