@@ -1,0 +1,29 @@
+.album{
+    display: grid;
+    border: 1px solid rgb(189, 188, 188);
+    padding: 5px;
+    margin: 4px;
+    background-color: rgb(240, 236, 232);
+    align-items: flex-start;
+    justify-content: center;
+    grid-template-rows: 145px;
+    grid-template-columns: 1fr;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.albumName{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #000;
+    background-color: rgba(255,255,255, 0.8);
+    border-radius: 0 0 3px 3px;
+}
+.albumName h4{
+    margin: 0;
+    padding: 5px;
+}
+
