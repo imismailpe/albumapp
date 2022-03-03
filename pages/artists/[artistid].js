@@ -19,7 +19,7 @@ const AnyArtist = () => {
         if(artistid){
             fetchArtist();
         }
-    }, []);
+    }, [artistid]);
     return (
         loading ? 'loading' : <div className={styles.artistGrid}><Artist artist={artist} /></div>
     )

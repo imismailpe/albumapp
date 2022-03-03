@@ -20,7 +20,7 @@ const AlbumPhotos = ()=>{
         if(albumid){
             fetchPhotos();
         }
-    },[]);
+    },[albumid]);
     return(
         loading? 'Loading..' 
         :<div className={styles.photoContainer}>

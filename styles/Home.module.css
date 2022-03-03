@@ -72,7 +72,12 @@
   flex-wrap: wrap;
   max-width: 800px;
 }
-
+.grid h2{
+  cursor: pointer;
+  border: 1px solid #eee;
+  padding: 8px;
+  margin: 8px;
+}
 .card {
   margin: 1rem;
   padding: 1.5rem;

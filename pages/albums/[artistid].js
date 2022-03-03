@@ -26,7 +26,7 @@ const AnyAlbum = () => {
             fetchAlbums();
             fetchCovers();
         }
-    }, []);
+    }, [artistid]);
     return (
         loading ? 'loading'
             : <div className={styles.albumGrid}>
