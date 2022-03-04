@@ -1,9 +1,9 @@
 import Album from "./album"
 
-const AlbumList = (props) => {
+const AlbumList = ({covers = [], list = []}) => {
     return(
-        props.list.map(album => {
-            const albumcovers = props.covers.filter(cover =>album.id === cover.albumId);
+        list.map(album => {
+            const albumcovers = covers.filter(cover =>album.id === cover.albumId);
             return <Album key={album.id} album={album} covers={albumcovers} />
         })
     )

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './album.module.css';
-const Album = ({ album, covers }) => {
+const Album = ({ album, covers = [] }) => {
     if (covers.length === 0) {
         return null;
     }
