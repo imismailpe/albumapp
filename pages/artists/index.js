@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
+import { fetchData } from "../../utils/functions";
 import Artist from "./artist";
 import styles from './index.module.css';
 
 const Artists = (props) => {
     const [userlist, setuserlist] = useState([]);
     const fetchUsers = async () => {
-        const result = await fetch('https://jsonplaceholder.typicode.com/users');
-        const data = await result.json();
+        const data = await fetchData('https://jsonplaceholder.typicode.com/users');
         setuserlist(data);
     }
     useEffect(() => {

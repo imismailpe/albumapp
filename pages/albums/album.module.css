@@ -19,8 +19,9 @@
     left: 0;
     width: 100%;
     color: #000;
-    background-color: rgba(255,255,255, 0.8);
+    background-color: rgba(255,255,255, 0.5);
     border-radius: 0 0 3px 3px;
+    backdrop-filter: blur(10px);
 }
 .albumName h4{
     margin: 0;

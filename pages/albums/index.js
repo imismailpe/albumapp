@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { fetchData } from "../../utils/functions";
 import AlbumList from "./albumList";
 import styles from './index.module.css';
 
@@ -6,13 +7,11 @@ const Albums = () => {
     const [albumlist, setalbumlist] = useState([]);
     const [coverlist, setcoverslist] = useState([]);
     const fetchAlbums = async () => {
-        const result = await fetch('https://jsonplaceholder.typicode.com/albums');
-        const data = await result.json();
+        const data = await fetchData('https://jsonplaceholder.typicode.com/albums');
         setalbumlist(data);
     }
     const fetchAlbumCovers = async () => {
-        const result = await fetch('https://jsonplaceholder.typicode.com/photos');
-        const data = await result.json();
+        const data = await fetchData('https://jsonplaceholder.typicode.com/photos');
         setcoverslist(data);
     }
     useEffect(() => {
@@ -26,16 +25,4 @@ const Albums = () => {
         </div>
     )
 }
-// export async function getStaticProps() {
-//     //static generation
-//     const result = await fetch('https://jsonplaceholder.typicode.com/users');
-//     const data = await result.json();
-//     return {
-//         props: {
-//             userlist: data
-//         }
-//     }
-// }
-
-
 export default Albums;

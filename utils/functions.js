@@ -8,3 +8,8 @@ export const fetchData = async (url) => {
     const data = await result.json();
     return data;
 }
+export const fetchPhotosForAlbum = async (albumid) => {
+    const result = await fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${albumid}`);
+    const data = await result.json();
+    return data;
+}
