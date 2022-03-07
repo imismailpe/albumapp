@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
-import { fetchPhotosForAlbum } from "../../../utils/functions";
+import { fetchData, fetchPhotosForAlbum } from "../../../utils/functions";
 import styles from './index.module.css';
 
 const AlbumPhotos = () => {
@@ -37,5 +37,20 @@ const AlbumPhotos = () => {
                 </div>
             </div>
     )
+}
+export async function getStaticProps({ params }){
+    const data = await fetchPhotosForAlbum(params.albumid);
+    return {
+        props: {
+            photos: data
+        }
+    }
+}
+export async function getStaticPaths(){
+    const albums = await fetchData('https://jsonplaceholder.typicode.com/albums');
+    const paths = albums.map(item => {
+        return { params: {albumid: item.id.toString()}}
+    })
+    return { paths, fallback: false };
 }
 export default AlbumPhotos;
